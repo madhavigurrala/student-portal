@@ -1,0 +1,18 @@
+<!-- templates/dashboard.html -->
+{% extends "base.html" %}
+{% block title %}Student Dashboard{% endblock %}
+{% block content %}
+<h2 class="text-center">Welcome, {{ user.username }}</h2>
+<h4>Your Marks:</h4>
+<table class="table table-striped">
+    <thead>
+        <tr><th>Subject</th><th>Marks</th></tr>
+    </thead>
+    <tbody>
+        {% for mark in marks %}
+        <tr><td>{{ mark.subject }}</td><td>{{ mark.score }}</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h5>Average: {{ average }}</h5>
+{% endblock %}
