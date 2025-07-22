@@ -1,0 +1,17 @@
+<!-- templates/add_marks.html -->
+{% extends "base.html" %}
+{% block title %}Add Marks{% endblock %}
+{% block content %}
+<h2 class="text-center">Add Marks for {{ student.username }}</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label>Subject:</label>
+        <input type="text" name="subject" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Marks:</label>
+        <input type="number" name="score" class="form-control" required>
+    </div>
+    <button class="btn btn-success w-100">Submit</button>
+</form>
+{% endblock %}
