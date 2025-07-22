@@ -1,0 +1,19 @@
+<!-- templates/admin_dashboard.html -->
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<h2 class="text-center">Admin Panel</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr><th>Student</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.username }}</td>
+            <td><a href="/add-marks/{{ student.id }}" class="btn btn-primary btn-sm">Add Marks</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
