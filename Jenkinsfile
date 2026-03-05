@@ -13,7 +13,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo "Installing Flask..."
-                bat 'pip install flask'
+                bat 'python -m pip install flask'
             }
         }
 
