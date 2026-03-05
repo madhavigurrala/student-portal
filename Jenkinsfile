@@ -5,22 +5,20 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                echo "Cloning GitHub Repository..."
+                echo "Cloning Repository..."
                 git branch: 'main', url: 'https://github.com/madhavigurrala/student-portal.git'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                echo "Installing Flask..."
-                bat 'python -m pip install flask'
+                bat '"C:\\Users\\GURRALA MADHAVI\\AppData\\Local\\Programs\\Python\\Python314\\python.exe" -m pip install flask'
             }
         }
 
         stage('Run Application') {
             steps {
-                echo "Running Flask App..."
-                bat 'python app.py'
+                bat '"C:\\Users\\GURRALA MADHAVI\\AppData\\Local\\Programs\\Python\\Python314\\python.exe" app.py'
             }
         }
 
